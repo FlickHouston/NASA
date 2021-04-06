@@ -139,20 +139,20 @@ footer {
 	z-index: 2;
 }
 
-@media (max-width: 1325px) {
+@media screen and (max-width: 1325px) {
 	header {
 		left: 0;
 		margin-left: auto;
 	}
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
 	.photo img {
 		max-height: 210px;
 	}
 }
 
-@media (max-width: 878px) {
+@media screen and (max-width: 878px) {
 	.photo img {
 		max-height: 100%;
 	}
@@ -164,10 +164,7 @@ footer {
 		padding: 6px 13px 50px 13px;
 	}
 
-	header {
-		padding: 20px;
-	}
-
+	header,
 	footer {
 		padding: 20px;
 	}
@@ -179,11 +176,36 @@ footer {
 		background: rgba(32, 58, 135, 0.6);
 	}
 
-	.photo h2 {
-		font-size: 20px;
-	}
-
+	.photo h2,
 	body {
 		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 290px) {
+	body {
+		font-size: 16px;
+		padding: 84px 0px 0px 0px;
+	}
+
+	.photo h2 {
+		font-size: 14px;
+	}
+
+	.overlay {
+		max-height: 2em;
+	}
+
+	.photo {
+		margin: 5px;
+	}
+
+	.photos {
+		padding: 0px 0px 20px 0px;
+	}
+
+	footer,
+	header {
+		padding: 10px;
 	}
 }
