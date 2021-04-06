@@ -21,6 +21,8 @@ nav {
 body {
 	position: relative;
 	min-height: 100vh;
+	max-width: 1300px;
+	margin: auto;
 }
 
 .content-wrap {
@@ -70,11 +72,13 @@ header {
 	z-index: 2;
 	/*z-index is layer order, default is 1. only useful in fixed or absolute positioning*/
 	top: 0;
-	left: 0;
+	left: 50%;
 	background: rgba(238, 238, 238, 0.8);
 	backdrop-filter: blur(5px);
 	width: 100%;
 	padding: 40px;
+	max-width: 1300px;
+	margin-left: -650px;
 }
 
 header h1 {
@@ -135,6 +139,13 @@ footer {
 	z-index: 2;
 }
 
+@media (max-width: 1325px) {
+	header {
+		left: 0;
+		margin-left: auto;
+	}
+}
+
 @media (max-width: 1200px) {
 	.photo img {
 		max-height: 210px;
@@ -159,5 +170,20 @@ footer {
 
 	footer {
 		padding: 20px;
+	}
+
+	.overlay {
+		opacity: 1;
+		top: 0;
+		max-height: 2em;
+		background: rgba(32, 58, 135, 0.6);
+	}
+
+	.photo h2 {
+		font-size: 20px;
+	}
+
+	body {
+		font-size: 20px;
 	}
 }
