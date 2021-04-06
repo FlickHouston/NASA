@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/*font-family: 'Montserrat', sans-serif;*/
+
+::selection {
+	color: white;
+	background-color: rgba(235, 141, 0, 0.301);
+}
+/*no drag code*/
+svg,
+img,
+a,
+nav {
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+
+/*begin footer agro*/
+body {
+	position: relative;
+	min-height: 100vh;
+}
+
+.content-wrap {
+	padding-bottom: 1rem;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+/*end footer agro*/
+
+body {
+	background: #eee;
+	font-family: "Montserrat";
+	color: #203a8f;
+	font-size: 24px;
+	line-height: 1.5;
+	padding-top: 104px;
+}
+
+a {
+	color: #203a8f;
+	text-decoration: none;
+	cursor: cell;
+	transition: 0.3s ease-in-out;
+}
+
+a:hover {
+	color: rgb(235, 141, 0);
+}
+
+header a svg #nasa {
+	transition: 0.3s ease-in-out;
+}
+
+header a svg:hover #nasa {
+	fill: rgb(235, 141, 0);
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 2;
+	/*z-index is layer order, default is 1. only useful in fixed or absolute positioning*/
+	top: 0;
+	left: 0;
+	background: rgba(238, 238, 238, 0.8);
+	backdrop-filter: blur(5px);
+	width: 100%;
+	padding: 40px;
+}
+
+header h1 {
+	width: 64px;
+}
+
+.photos {
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+	padding: 36px 30px 84px 30px;
+}
+
+.photo {
+	margin: 10px;
+	position: relative;
+}
+
+.photo img {
+	max-height: 300px;
+}
+
+.photo:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(2px);
+	backdrop-filter: grayscale(1);
+	opacity: 0;
+	background: rgba(32, 58, 135, 0.85);
+	transition: all 0.4s ease-in-out;
+}
+
+.photo h2 {
+	color: #fff;
+	font-size: 32px;
+	line-height: 1.2;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 20px;
+}
+
+footer {
+	padding: 40px;
+	margin-top: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	z-index: 2;
+}
+
+@media (max-width: 1200px) {
+	.photo img {
+		max-height: 210px;
+	}
+}
+
+@media (max-width: 878px) {
+	.photo img {
+		max-height: 100%;
+	}
+
+	.photos {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 6px 13px 50px 13px;
+	}
+
+	header {
+		padding: 20px;
+	}
+
+	footer {
+		padding: 20px;
+	}
+}
